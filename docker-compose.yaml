@@ -1,0 +1,9 @@
+services:
+  open-directory:
+    build: .
+    container_name: HTTP_Server
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./Files:/app
+    restart: unless-stopped
